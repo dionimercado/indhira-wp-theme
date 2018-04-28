@@ -2,9 +2,9 @@
   "name": "indhira",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts" : {
+  "scripts": {
     "compile:sass": "node-sass sass/main.scss assets/css/indhira.css -w"
-  }
+  },
   "license": "MIT",
   "devDependencies": {
     "node-sass": "^4.9.0"
