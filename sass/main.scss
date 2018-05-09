@@ -1,3 +1,239 @@
+// Local docs variables
+$primary-color:         #e4b094 !default;
+$secondary-color:       #a87e2d !default;
+$tertiary-color:        #939598 !default;
+$light-color:           #fff;
+$text-white:            #fff;
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #e4b194;
+  background-color: $light-color;
+  font-size: 1.6rem;
+  padding-top: 7rem;
+}
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.bg-light {
+    background-color: $light-color!important;
+}
+.bg-primary {
+  background: #f3f1ec url( '../images/main_bg.jpg' );
+}
+
+.btn {
+  font-size: 1.4rem;
+  padding: 1.3em 4.15em;
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-transform: uppercase;
+  line-height: 1.75em;
+  border: none;
+  -webkit-transition: all ease .3s;
+  -moz-transition: all ease .3s;
+  -ms-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+#header .navbar-toggler-icon {
+  background-image: none !important;
+  background-color: #1e3160;
+  height: 0.2rem;
+  width: 2.5rem;
+  position: relative;
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: #1e3160;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: inherit;
+
+    -webkit-transform: rotate(0) translateX(0);
+    -ms-transform: rotate(0) translateX(0);
+    transform: rotate(0) translateX(0);
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+
+  }
+
+  &::before  {
+    top: -0.8rem;
+  }
+  &::after  {
+    bottom: -0.8rem;
+  }
+}
+
+
+
+#header .open .navbar-toggler-icon {
+  background-color: transparent;
+}
+#header .open .navbar-toggler-icon::before  {
+  top: 0;
+
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#header .open .navbar-toggler-icon::after  {
+  bottom: 0rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.navbar-brand {
+  height: 6rem;
+  margin-left: 5%;
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.navbar-nav {
+  margin-right: 5%;
+}
+
+.nav-item {
+  & > .nav-link {
+    font-weight: 400;
+    font-family: 'Playfair Display';
+    letter-spacing: 0px;
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: $tertiary-color !important;
+  }
+
+  &.active > .nav-link,
+  & > .nav-link:hover {
+    color: $primary-color !important;
+  }
+
+}
+
+
+.footer {
+  position: relative;
+  padding: 3rem;
+  &__gotop {
+    position: absolute !important;
+    width: 12rem;
+    height: 6.5rem;
+    line-height: 2rem;
+    right: 2rem;
+    top: -3.5rem;
+    left: 2em;
+    bottom: auto !important;
+    margin: auto;
+    color: inherit;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+    -webkit-border-radius: 6em 6em 0 0;
+    -moz-border-radius: 6em 6em 0 0;
+    border-radius: 6rem 6rem 0 0;
+    padding-top: 1rem;
+    background-color: #fff;
+    color: $tertiary-color;
+
+    & > i,
+    & > span {
+      display: block;
+    }
+
+    &:hover {
+      color: $primary-color;
+      -webkit-box-shadow: 0 -10px 3px -3px rgba(0,0,0,0.1);
+      -moz-box-shadow: 0 -10px 3px -3px rgba(0,0,0,0.1);
+      box-shadow: 0 -10px 3px -3px rgba(0,0,0,0.1);
+    }
+  }
+  &__logo {
+    height: 120px;
+    padding: 0 8rem;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__socials {
+    a {
+      width: 4rem;
+      height: 4rem;
+      line-height: 4rem;
+      background-color: $tertiary-color;
+      display: inline-block;
+      color: $text-white;
+      border-radius: 50%;
+      margin: 0 .5rem;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .btn {
+    display: block;
+    width: 100%;
+  }
+  .navbar-brand {
+    margin-left: 0;
+  }
 }

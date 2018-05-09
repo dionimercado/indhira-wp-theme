@@ -1,2 +1,174 @@
+:root {
+  font-size: 62.5%; }
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
-  background-color: #e4b194; }
+  background-color: #fff;
+  font-size: 1.6rem;
+  padding-top: 7rem; }
+
+a {
+  color: #e4b094; }
+  a:hover {
+    text-decoration: none; }
+
+.bg-light {
+  background-color: #fff !important; }
+
+.bg-primary {
+  background: #f3f1ec url("../images/main_bg.jpg"); }
+
+.btn {
+  font-size: 1.4rem;
+  padding: 1.3em 4.15em;
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  text-transform: uppercase;
+  line-height: 1.75em;
+  border: none;
+  -webkit-transition: all ease .3s;
+  -moz-transition: all ease .3s;
+  -ms-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s; }
+
+.btn-primary {
+  background-color: #e4b094; }
+  .btn-primary:hover {
+    background-color: #a87e2d; }
+
+#header .navbar-toggler-icon {
+  background-image: none !important;
+  background-color: #1e3160;
+  height: 0.2rem;
+  width: 2.5rem;
+  position: relative;
+  -webkit-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease; }
+  #header .navbar-toggler-icon::before, #header .navbar-toggler-icon::after {
+    content: "";
+    background-color: #1e3160;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: inherit;
+    -webkit-transform: rotate(0) translateX(0);
+    -ms-transform: rotate(0) translateX(0);
+    transform: rotate(0) translateX(0);
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
+  #header .navbar-toggler-icon::before {
+    top: -0.8rem; }
+  #header .navbar-toggler-icon::after {
+    bottom: -0.8rem; }
+
+#header .open .navbar-toggler-icon {
+  background-color: transparent; }
+
+#header .open .navbar-toggler-icon::before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+#header .open .navbar-toggler-icon::after {
+  bottom: 0rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.navbar-brand {
+  height: 6rem;
+  margin-left: 5%; }
+  .navbar-brand img {
+    width: auto;
+    height: 100%; }
+
+.navbar-nav {
+  margin-right: 5%; }
+
+.nav-item > .nav-link {
+  font-weight: 400;
+  font-family: 'Playfair Display';
+  letter-spacing: 0px;
+  font-style: italic;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #939598 !important; }
+
+.nav-item.active > .nav-link,
+.nav-item > .nav-link:hover {
+  color: #e4b094 !important; }
+
+.footer {
+  position: relative;
+  padding: 3rem; }
+  .footer__gotop {
+    position: absolute !important;
+    width: 12rem;
+    height: 6.5rem;
+    line-height: 2rem;
+    right: 2rem;
+    top: -3.5rem;
+    left: 2em;
+    bottom: auto !important;
+    margin: auto;
+    color: inherit;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    -ms-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+    -webkit-border-radius: 6em 6em 0 0;
+    -moz-border-radius: 6em 6em 0 0;
+    border-radius: 6rem 6rem 0 0;
+    padding-top: 1rem;
+    background-color: #fff;
+    color: #939598; }
+    .footer__gotop > i,
+    .footer__gotop > span {
+      display: block; }
+    .footer__gotop:hover {
+      color: #e4b094;
+      -webkit-box-shadow: 0 -10px 3px -3px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 -10px 3px -3px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 -10px 3px -3px rgba(0, 0, 0, 0.1); }
+  .footer__logo {
+    height: 120px;
+    padding: 0 8rem; }
+    .footer__logo img {
+      height: 100%;
+      width: auto; }
+  .footer__socials a {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #939598;
+    display: inline-block;
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 .5rem; }
+    .footer__socials a:hover {
+      background-color: #e4b094; }
+  .footer__copyright {
+    font-size: 1.2rem; }
+
+@media screen and (max-width: 768px) {
+  .btn {
+    display: block;
+    width: 100%; }
+  .navbar-brand {
+    margin-left: 0; } }
